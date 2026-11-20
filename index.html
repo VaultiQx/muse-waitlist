@@ -88,7 +88,6 @@
     border:1px solid var(--line);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow)}
   .hero-badge .dot{width:10px;height:10px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
   .hero-badge b{font-size:15px;display:block;line-height:1.3}
-  .hero-badge span{font-size:13px;color:var(--muted)}
 
   /* ---------- tasks ---------- */
   .progress{max-width:720px;margin-bottom:32px}
@@ -119,13 +118,11 @@
   .task-done .task-open,.task-done .task-confirm{display:none}
   .task-done .task-done-pill{display:inline-flex}
   .task-body{flex:1;min-width:0}
-  .task-body p{color:var(--muted);font-size:15.5px;margin-top:4px}
   .task-actions{display:flex;align-items:center;gap:10px;flex:none}
   .task-actions .btn{min-height:44px;padding:10px 18px;font-size:15px}
   .task-done-pill{align-items:center;gap:7px;font-weight:700;font-size:14px;border-radius:999px;padding:8px 14px;
     background:var(--success-soft);color:#1E6B52;border:1px solid #BFE6D6}
   .task-done-pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--success)}
-  .tasks-note{margin-top:24px;font-size:14.5px;color:var(--muted)}
   .reset-link{margin-top:10px;background:none;border:0;cursor:pointer;padding:6px 0;font:inherit;font-size:14.5px;
     font-weight:600;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
   .reset-link:hover{color:var(--ink)}
@@ -170,15 +167,36 @@
   .preview-note{margin-top:18px;font-size:13px;color:#8A6D00;background:var(--gold-bg);border:1px solid var(--gold-line);
     border-radius:12px;padding:10px 14px;text-align:left}
 
-  /* ---------- showcase grid ---------- */
-  .show-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .show-card{background:var(--card);border:1px solid var(--line);
-    border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .2s ease}
-  .show-card:hover{transform:translateY(-3px)}
-  .show-card img{width:100%;aspect-ratio:1/1;object-fit:cover}
-  .show-card .cap{padding:14px 16px}
-  .show-card .cap b{font-size:15px;display:block}
-  .show-card .cap span{font-size:13.5px;color:var(--muted)}
+  /* ---------- slideshow ---------- */
+  .slideshow{max-width:480px;margin:0 auto}
+  .slide-card{background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .slide-stage{position:relative}
+  .slide-viewport{overflow:hidden;touch-action:pan-y;aspect-ratio:1/1}
+  .slide-track{display:flex;transition:transform .45s ease}
+  .slide{flex:0 0 100%;min-width:0}
+  .slide img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff}
+  .slide-cap{padding:16px 18px 15px;text-align:center}
+  .slide-cap b{font-size:16px;display:block}
+  .slide-cap span{font-size:14px;color:var(--muted)}
+  .slide-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:44px;height:44px;
+    border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.94);color:var(--ink);
+    cursor:pointer;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 14px rgba(12,12,12,.14);transition:transform .15s ease,background .15s ease}
+  .slide-arrow:hover{background:#fff;transform:translateY(-50%) scale(1.06)}
+  .slide-arrow:focus-visible{outline:3px solid rgba(194,24,91,.45);outline-offset:2px}
+  .slide-arrow svg{width:20px;height:20px}
+  .slide-prev{left:12px}
+  .slide-prev svg{transform:rotate(90deg)}
+  .slide-next{right:12px}
+  .slide-next svg{transform:rotate(-90deg)}
+  .slide-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:18px}
+  .slide-dots{display:flex;gap:8px}
+  .slide-dot{width:12px;height:12px;min-width:12px;border-radius:50%;border:0;padding:0;
+    background:#D8D5CF;cursor:pointer;transition:background .2s ease,transform .2s ease}
+  .slide-dot[aria-current="true"]{background:var(--accent);transform:scale(1.25)}
+  .slide-dot:focus-visible{outline:3px solid rgba(194,24,91,.45);outline-offset:2px}
+  .slide-count{font-size:14px;font-weight:700;color:var(--muted);min-width:44px;text-align:center}
 
   /* ---------- FAQ ---------- */
   .faq-list{max-width:760px}
@@ -195,7 +213,6 @@
   footer{background:#111113;color:#C9C9D6;padding:64px 0 0}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.4fr;gap:48px;padding-bottom:48px}
   .foot-brand .brand{color:#fff;margin-bottom:14px}
-  .foot-brand p{font-size:15px;max-width:340px}
   .socials{display:flex;gap:10px;margin-top:20px}
   .social-pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;text-decoration:none;
     background:#23232E;border:1px solid #33333F;color:#fff;font-size:14px;font-weight:600;transition:background .15s ease}
@@ -212,7 +229,6 @@
   @media (max-width:900px){
     .hero-grid{grid-template-columns:1fr;gap:48px}
     .hero{padding:64px 0 56px}
-    .show-grid{grid-template-columns:repeat(2,1fr)}
     .foot-grid{grid-template-columns:1fr;gap:36px}
     nav{position:fixed;top:72px;left:0;right:0;background:#fff;
       flex-direction:column;align-items:stretch;gap:4px;padding:14px 20px 20px;border-bottom:1px solid var(--line);
@@ -300,7 +316,7 @@
         <p class="lede"><strong>3,333 soft fluffy creatures</strong>, each one unique, each with a pink butterfly on its head. Free mint on Robinhood, gas only. Foxora holders get in first.</p>
         <div class="hero-actions">
           <a class="btn btn-primary join-link" href="#steps">Join the Waitlist</a>
-          <a class="btn btn-ghost" href="https://x.com/musenftxyz/article/2123693661418590489" target="_blank" rel="noopener">Read the article</a>
+          <a class="btn btn-ghost" href="https://x.com/musenftxyz/status/2123693661418590489" target="_blank" rel="noopener">Read the post</a>
         </div>
         <div class="stats" role="list">
           <div class="stat" role="listitem"><b>3,333</b><span>Total supply</span></div>
@@ -314,7 +330,7 @@
         </div>
         <div class="hero-badge">
           <span class="dot" aria-hidden="true"></span>
-          <div><b>Waitlist is open</b><span>Foxora holders get in first</span></div>
+          <div><b>Waitlist is open</b></div>
         </div>
       </div>
     </div>
@@ -326,7 +342,6 @@
       <div class="section-head">
         <span class="eyebrow">How to join</span>
         <h2 style="margin-top:16px">Complete all 4 steps</h2>
-        <p>Do each step, confirm it, and the next one unlocks. The form appears only after step 4.</p>
       </div>
       <div class="progress" role="status">
         <div class="progress-top"><b id="progress-count">0 of 4 done</b><span id="progress-label">Follow first to begin</span></div>
@@ -341,7 +356,6 @@
           </span>
           <div class="task-body">
             <h3>Follow @musenftxyz</h3>
-            <p>Follow the Muse World account on X so you do not miss the mint announcement.</p>
           </div>
           <div class="task-actions">
             <a class="btn btn-ghost task-open" href="https://x.com/musenftxyz" target="_blank" rel="noopener">Open on X</a>
@@ -356,8 +370,7 @@
             <svg class="task-check-ico"><use href="#check"/></svg>
           </span>
           <div class="task-body">
-            <h3>Like the article post</h3>
-            <p>Tap the heart on the launch article so more people find Muse World.</p>
+            <h3>Like the post</h3>
           </div>
           <div class="task-actions">
             <a class="btn btn-ghost task-open" href="https://x.com/musenftxyz/status/2123693661418590489" target="_blank" rel="noopener">Open the post</a>
@@ -372,8 +385,7 @@
             <svg class="task-check-ico"><use href="#check"/></svg>
           </span>
           <div class="task-body">
-            <h3>Comment on the article post</h3>
-            <p>Leave a comment on the launch article. Tell us which Muse is your favourite.</p>
+            <h3>Comment on the post</h3>
           </div>
           <div class="task-actions">
             <a class="btn btn-ghost task-open" href="https://x.com/musenftxyz/status/2123693661418590489" target="_blank" rel="noopener">Open the post</a>
@@ -388,8 +400,7 @@
             <svg class="task-check-ico"><use href="#check"/></svg>
           </span>
           <div class="task-body">
-            <h3>Repost the article post</h3>
-            <p>Repost the launch article so more people find Muse World.</p>
+            <h3>Repost the post</h3>
           </div>
           <div class="task-actions">
             <a class="btn btn-ghost task-open" href="https://x.com/musenftxyz/status/2123693661418590489" target="_blank" rel="noopener">Open the post</a>
@@ -398,7 +409,6 @@
           </div>
         </article>
       </div>
-      <p class="tasks-note">We spot-check handles before the mint.</p>
       <button class="reset-link" id="reset-tasks" type="button">Start over</button>
     </div>
   </section>
@@ -410,24 +420,24 @@
         <div class="section-head">
           <span class="eyebrow">Waitlist</span>
           <h2 style="margin-top:16px">Save your spot</h2>
-          <p>Foxora holders get in first. We check your address on-chain, right here.</p>
+          <p>We check your address on-chain.</p>
         </div>
         <form id="waitlist-form" novalidate>
           <div class="field">
             <label for="x-user">Your X username</label>
             <input id="x-user" name="x-user" type="text" placeholder="0xArcherxyz" autocomplete="username" maxlength="16" required>
-            <p class="hint">Without the @ sign. We use it to confirm your like, comment and repost.</p>
+            <p class="hint">Without the @ sign.</p>
             <p class="err-msg" id="x-err">Enter a valid X username, letters, numbers and underscores only.</p>
           </div>
           <div class="field">
             <label for="evm-addr">Your EVM address</label>
             <input id="evm-addr" name="evm-addr" type="text" placeholder="0x..." autocomplete="off" spellcheck="false" required>
-            <p class="hint">The wallet you will mint with. No wallet connection, no signature, nothing is stored in your browser except a local backup note.</p>
+            <p class="hint">The wallet you will mint with.</p>
             <p class="err-msg" id="addr-err">That address does not look right. It must start with 0x and be 42 characters long.</p>
           </div>
           <div class="check-line" id="check-line" aria-live="polite"></div>
           <button class="btn btn-primary" type="submit" id="submit-btn">Join the waitlist</button>
-          <p class="form-note">One entry per wallet. Foxora holders mint first, then the waitlist opens in order.</p>
+          <p class="form-note">One entry per wallet.</p>
         </form>
         <div class="success" id="success" role="status">
           <div class="ok"><svg aria-hidden="true"><use href="#check"/></svg></div>
@@ -450,33 +460,29 @@
       <div class="section-head">
         <span class="eyebrow">Meet a few Muses</span>
         <h2 style="margin-top:16px">Every Muse is one of a kind</h2>
-        <p>Its own fur color, its own butterfly, its own glasses, its own cute element, its own flower, and its own head design. No two are the same.</p>
       </div>
-      <div class="show-grid">
-        <article class="show-card">
-          <img src="assets/muse-01.webp" alt="Blue Muse with a rainbow butterfly, heart glasses and a flower crown" width="640" height="640" loading="lazy">
-          <div class="cap"><b>Blue fur, flower crown</b><span>Rainbow butterfly, heart glasses</span></div>
-        </article>
-        <article class="show-card">
-          <img src="assets/muse-02.webp" alt="Golden Muse with a rainbow butterfly, sunglasses and a flower crown" width="640" height="640" loading="lazy">
-          <div class="cap"><b>Golden fur, flower crown</b><span>Rainbow butterfly, sunglasses</span></div>
-        </article>
-        <article class="show-card">
-          <img src="assets/muse-03.webp" alt="Lavender Muse with a blue butterfly, goggles and a gold crown" width="640" height="640" loading="lazy">
-          <div class="cap"><b>Lavender fur, gold crown</b><span>Blue butterfly, goggles</span></div>
-        </article>
-        <article class="show-card">
-          <img src="assets/muse-05.webp" alt="Peach Muse with a blue butterfly, sunglasses and bunny ears" width="640" height="640" loading="lazy">
-          <div class="cap"><b>Peach fur, bunny ears</b><span>Blue butterfly, sunglasses</span></div>
-        </article>
-        <article class="show-card">
-          <img src="assets/muse-07.webp" alt="Golden Muse with a blue butterfly, cat-eye glasses and a gold crown" width="640" height="640" loading="lazy">
-          <div class="cap"><b>Golden fur, gold crown</b><span>Blue butterfly, cat-eye glasses</span></div>
-        </article>
-        <article class="show-card">
-          <img src="assets/muse-09.webp" alt="White Muse with a rainbow butterfly, goggles and a tiara" width="640" height="640" loading="lazy">
-          <div class="cap"><b>White fur, tiara</b><span>Rainbow butterfly, goggles</span></div>
-        </article>
+      <div class="slideshow" id="slideshow" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Muse slideshow">
+        <div class="slide-card">
+          <div class="slide-stage">
+            <div class="slide-viewport">
+              <div class="slide-track" id="slide-track">
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="1 of 6: Blue fur, flower crown"><img src="assets/muse-01.webp" alt="Blue Muse with a rainbow butterfly, heart glasses and a flower crown" loading="lazy"></div>
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 6: Golden fur, flower crown"><img src="assets/muse-02.webp" alt="Golden Muse with a rainbow butterfly, sunglasses and a flower crown" loading="lazy"></div>
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 6: Lavender fur, gold crown"><img src="assets/muse-03.webp" alt="Lavender Muse with a blue butterfly, goggles and a gold crown" loading="lazy"></div>
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 6: Peach fur, bunny ears"><img src="assets/muse-05.webp" alt="Peach Muse with a blue butterfly, sunglasses and a flower crown" loading="lazy"></div>
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="5 of 6: Golden fur, gold crown"><img src="assets/muse-07.webp" alt="Golden Muse with a blue butterfly, cat-eye glasses and a gold crown" loading="lazy"></div>
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="6 of 6: White fur, tiara"><img src="assets/muse-09.webp" alt="White Muse with a rainbow butterfly, goggles and a tiara" loading="lazy"></div>
+              </div>
+            </div>
+            <button class="slide-arrow slide-prev" id="slide-prev" type="button" aria-label="Previous Muse"><svg aria-hidden="true"><use href="#chev"/></svg></button>
+            <button class="slide-arrow slide-next" id="slide-next" type="button" aria-label="Next Muse"><svg aria-hidden="true"><use href="#chev"/></svg></button>
+          </div>
+          <div class="slide-cap"><b id="slide-cap-title">Blue fur, flower crown</b><span id="slide-cap-trait">Rainbow butterfly, heart glasses</span></div>
+        </div>
+        <div class="slide-controls">
+          <div class="slide-dots" id="slide-dots" role="tablist" aria-label="Choose a Muse"></div>
+          <span class="slide-count" id="slide-count" aria-live="polite">1 / 6</span>
+        </div>
       </div>
     </div>
   </section>
@@ -491,11 +497,11 @@
       <div class="faq-list">
         <details>
           <summary>Is the mint really free?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
-          <p>Yes. Each Muse is free to mint. You only pay the network gas fee on Robinhood Chain, which is usually a few cents.</p>
+          <p>Yes. You only pay gas, usually a few cents.</p>
         </details>
         <details>
           <summary>Which chain is it on?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
-          <p>Robinhood Chain, chain ID 4663. You pay gas in ETH on that chain. No wallet connection is needed to join the waitlist.</p>
+          <p>Robinhood Chain, chain ID 4663. Gas is paid in ETH.</p>
         </details>
         <details>
           <summary>How many Muses are there?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
@@ -503,15 +509,15 @@
         </details>
         <details>
           <summary>What is a blind reveal?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
-          <p>The artwork stays hidden while the mint runs. Once all 3,333 are minted, every Muse is revealed at once.</p>
+          <p>Hidden during the mint, revealed all at once after sellout.</p>
         </details>
         <details>
           <summary>I hold a Foxora. What do I get?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
-          <p>Foxora holders get in first with guaranteed access, then the waitlist opens. Paste your address in the form above and we check it on-chain.</p>
+          <p>Foxora holders mint first, then the waitlist opens.</p>
         </details>
         <details>
           <summary>When is the mint?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
-          <p>The date is not set yet. Join the waitlist and follow @musenftxyz for the announcement.</p>
+          <p>Not set yet. Follow @musenftxyz for the announcement.</p>
         </details>
       </div>
     </div>
@@ -526,7 +532,6 @@
           <img src="assets/logo.webp" alt="" width="40" height="40">
           <span>Muse <em>World</em></span>
         </a>
-        <p>3,333 soft fluffy creatures, each one unique, each with a pink butterfly on its head.</p>
         <div class="socials">
           <a class="social-pill" href="https://x.com/musenftxyz" target="_blank" rel="noopener">
             <svg class="x-icon" aria-hidden="true"><use href="#x-logo"/></svg> @musenftxyz
@@ -540,7 +545,7 @@
           <li><a href="#steps">How to join</a></li>
           <li><a class="join-link" href="#steps">Join the waitlist</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="https://x.com/musenftxyz/article/2123693661418590489" target="_blank" rel="noopener">Read the article</a></li>
+          <li><a href="https://x.com/musenftxyz/status/2123693661418590489" target="_blank" rel="noopener">Read the post</a></li>
           <li><a href="https://opensea.io/collection/foxora" target="_blank" rel="noopener">Foxora on OpenSea</a></li>
         </ul>
       </div>
@@ -590,8 +595,7 @@
      confirmed. The active task needs an "Open on X" click first, then the
      confirm button enables. Progress persists in localStorage so a refresh
      keeps the state. The submit form stays hidden until all 4 are done.
-     Confirmation is self-reported: the page says so honestly under the list
-     ("We spot-check handles before the mint"), there is no fake verified tick. */
+     Confirmation is self-reported ("I did it, confirm"); there is no fake verified tick. */
   var TASK_STORE = "muse-waitlist-tasks-v2";
   var taskEls = Array.prototype.slice.call(document.querySelectorAll(".task"));
   var progressCount = document.getElementById("progress-count");
@@ -900,6 +904,108 @@
       body: body.toString()
     }).then(finish, finish);
   });
+  /* ---------- slideshow ----------
+     One slide at a time on every screen size, square frame, image fully
+     visible with object-fit: contain (never cropped). Arrows, dots, counter,
+     swipe, keyboard, and auto-advance every 5s that pauses on hover, touch,
+     focus, or any manual navigation. No auto-advance under
+     prefers-reduced-motion. */
+  var SLIDES = [
+    { title: "Blue fur, flower crown", trait: "Rainbow butterfly, heart glasses" },
+    { title: "Golden fur, flower crown", trait: "Rainbow butterfly, sunglasses" },
+    { title: "Lavender fur, gold crown", trait: "Blue butterfly, goggles" },
+    { title: "Peach fur, bunny ears", trait: "Blue butterfly, sunglasses" },
+    { title: "Golden fur, gold crown", trait: "Blue butterfly, cat-eye glasses" },
+    { title: "White fur, tiara", trait: "Rainbow butterfly, goggles" }
+  ];
+  var slideshow = document.getElementById("slideshow");
+  var track = document.getElementById("slide-track");
+  var slideEls = Array.prototype.slice.call(track.children);
+  var dotsBox = document.getElementById("slide-dots");
+  var countEl = document.getElementById("slide-count");
+  var capTitle = document.getElementById("slide-cap-title");
+  var capTrait = document.getElementById("slide-cap-trait");
+  var prevBtn = document.getElementById("slide-prev");
+  var nextBtn = document.getElementById("slide-next");
+  var slideIndex = 0;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var autoTimer = null, resumeTimer = null;
+
+  var dotBtns = SLIDES.map(function (s, i) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "slide-dot";
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-label", "Go to slide " + (i + 1) + ": " + s.title);
+    b.addEventListener("click", function () { goTo(i, true); });
+    dotsBox.appendChild(b);
+    return b;
+  });
+
+  function renderSlide() {
+    track.style.transform = "translateX(-" + (slideIndex * 100) + "%)";
+    slideEls.forEach(function (el, i) {
+      el.setAttribute("aria-hidden", i === slideIndex ? "false" : "true");
+    });
+    dotBtns.forEach(function (b, i) {
+      if (i === slideIndex) b.setAttribute("aria-current", "true");
+      else b.removeAttribute("aria-current");
+    });
+    countEl.textContent = (slideIndex + 1) + " / " + SLIDES.length;
+    capTitle.textContent = SLIDES[slideIndex].title;
+    capTrait.textContent = SLIDES[slideIndex].trait;
+  }
+
+  function stopAuto() {
+    if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+    if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
+  }
+
+  function startAuto() {
+    if (reduceMotion || autoTimer) return;
+    autoTimer = setInterval(function () { goTo(slideIndex + 1, false); }, 5000);
+  }
+
+  function pauseAutoThenResume(delay) {
+    stopAuto();
+    resumeTimer = setTimeout(startAuto, delay);
+  }
+
+  function goTo(i, manual) {
+    slideIndex = ((i % SLIDES.length) + SLIDES.length) % SLIDES.length;
+    renderSlide();
+    if (manual) pauseAutoThenResume(10000);
+  }
+
+  prevBtn.addEventListener("click", function () { goTo(slideIndex - 1, true); });
+  nextBtn.addEventListener("click", function () { goTo(slideIndex + 1, true); });
+  slideshow.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") { e.preventDefault(); goTo(slideIndex - 1, true); }
+    if (e.key === "ArrowRight") { e.preventDefault(); goTo(slideIndex + 1, true); }
+  });
+  slideshow.addEventListener("mouseenter", stopAuto);
+  slideshow.addEventListener("mouseleave", startAuto);
+  slideshow.addEventListener("focusin", stopAuto);
+  slideshow.addEventListener("focusout", startAuto);
+  document.addEventListener("visibilitychange", function () {
+    if (document.hidden) stopAuto(); else startAuto();
+  });
+
+  var touchX = null;
+  track.addEventListener("touchstart", function (e) {
+    touchX = e.changedTouches[0].clientX;
+    stopAuto();
+  }, { passive: true });
+  track.addEventListener("touchend", function (e) {
+    if (touchX === null) return;
+    var dx = e.changedTouches[0].clientX - touchX;
+    touchX = null;
+    if (Math.abs(dx) > 40) goTo(slideIndex + (dx < 0 ? 1 : -1), true);
+    else pauseAutoThenResume(5000);
+  }, { passive: true });
+
+  renderSlide();
+  startAuto();
 })();
 </script>
 </body>
