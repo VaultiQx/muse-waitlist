@@ -115,11 +115,13 @@
   .task-done .task-check-ico{display:block}
   .task-done .task-ico{background:var(--success-soft)}
   .task-done .task-open,.task-done .task-confirm{display:none}
+  .task-done .task-actions,.task-locked .task-actions{display:none}
   .task-done .task-done-pill{display:inline-flex}
-  .task-body{flex:1;min-width:0}
+  .task-body{flex:1;min-width:0;display:flex;align-items:center;gap:10px}
+  .task-body h3{flex:1 1 auto;min-width:0}
   .task-actions{display:flex;align-items:center;gap:10px;flex:none}
   .task-actions .btn{min-height:44px;padding:10px 18px;font-size:15px}
-  .task-done-pill{align-items:center;gap:7px;font-weight:700;font-size:14px;border-radius:999px;padding:8px 14px;
+  .task-done-pill{align-items:center;gap:7px;margin-left:auto;flex:none;white-space:nowrap;font-weight:700;font-size:14px;border-radius:999px;padding:8px 14px;
     background:var(--success-soft);color:#1E6B52;border:1px solid #BFE6D6}
   .task-done-pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--success)}
   .reset-link{margin-top:10px;background:none;border:0;cursor:pointer;padding:6px 0;font:inherit;font-size:14.5px;
@@ -252,18 +254,25 @@
     .header-actions .follow-btn{display:none}
   }
   @media (max-width:640px){
-    section{padding:64px 0}
+    section{padding:56px 0}
+    .section-head{margin-bottom:32px}
+    .hero{padding:48px 0 40px}
+    .stats{padding-top:20px;margin-top:20px}
     .form-card{padding:32px 22px}
-    .stats b{font-size:22px}
-    .hero-actions .btn{flex:1;justify-content:center;white-space:nowrap;padding-left:16px;padding-right:16px}
+    .stats b{font-size:20px;white-space:nowrap}
+    .hero-actions .btn{flex:1;justify-content:center;white-space:nowrap;padding-left:16px;padding-right:16px;font-size:15px}
     .header-inner{gap:10px}
     .brand{font-size:18px;gap:8px}
     .brand img{width:34px;height:34px}
     .cta-btn{padding:9px 13px;font-size:13px}
-    .task{flex-wrap:wrap;gap:14px;padding:20px}
+    .task{flex-wrap:wrap;gap:10px 12px;padding:14px 16px}
+    .task-ico{width:36px;height:36px}
+    .task-ico .task-num{font-size:16px}
+    .task-ico svg{width:20px;height:20px}
+    .task-body h3{font-size:14px}
     .task-actions{width:100%}
-    .task-actions .btn{flex:1}
-    .task-done-pill{margin-left:auto}
+    .task-actions .btn{flex:1;white-space:nowrap;padding:10px 12px;font-size:14px;min-height:42px}
+    .task-done-pill{padding:6px 12px;font-size:13px}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
@@ -365,11 +374,11 @@
           </span>
           <div class="task-body">
             <h3>Follow @musenftxyz</h3>
+            <span class="task-done-pill">Done</span>
           </div>
           <div class="task-actions">
             <a class="btn btn-ghost task-open" href="https://x.com/musenftxyz" target="_blank" rel="noopener">Open on X</a>
             <button class="btn btn-primary task-confirm" type="button" disabled>I did it, confirm</button>
-            <span class="task-done-pill">Done</span>
           </div>
         </article>
         <article class="task task-locked" data-task="2" id="task-2">
@@ -380,11 +389,11 @@
           </span>
           <div class="task-body">
             <h3>Like the post</h3>
+            <span class="task-done-pill">Done</span>
           </div>
           <div class="task-actions">
             <a class="btn btn-ghost task-open" href="https://x.com/musenftxyz/status/2123693661418590489" target="_blank" rel="noopener">Open the post</a>
             <button class="btn btn-primary task-confirm" type="button" disabled>I did it, confirm</button>
-            <span class="task-done-pill">Done</span>
           </div>
         </article>
         <article class="task task-locked" data-task="3" id="task-3">
@@ -395,11 +404,11 @@
           </span>
           <div class="task-body">
             <h3>Comment on the post</h3>
+            <span class="task-done-pill">Done</span>
           </div>
           <div class="task-actions">
             <a class="btn btn-ghost task-open" href="https://x.com/musenftxyz/status/2123693661418590489" target="_blank" rel="noopener">Open the post</a>
             <button class="btn btn-primary task-confirm" type="button" disabled>I did it, confirm</button>
-            <span class="task-done-pill">Done</span>
           </div>
         </article>
         <article class="task task-locked" data-task="4" id="task-4">
@@ -410,11 +419,11 @@
           </span>
           <div class="task-body">
             <h3>Repost the post</h3>
+            <span class="task-done-pill">Done</span>
           </div>
           <div class="task-actions">
             <a class="btn btn-ghost task-open" href="https://x.com/musenftxyz/status/2123693661418590489" target="_blank" rel="noopener">Open the post</a>
             <button class="btn btn-primary task-confirm" type="button" disabled>I did it, confirm</button>
-            <span class="task-done-pill">Done</span>
           </div>
         </article>
       </div>
