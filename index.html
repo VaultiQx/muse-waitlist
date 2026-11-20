@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muse World Waitlist | Free mint on Robinhood</title>
+<meta name="description" content="Join the Muse World waitlist. 3,333 soft fluffy creatures, each one unique, each with a pink butterfly on its head. Free mint on Robinhood, gas only. Foxora holders get in first.">
+<meta property="og:title" content="Muse World Waitlist">
+<meta property="og:description" content="3,333 soft fluffy creatures. Free mint on Robinhood, gas only. Foxora holders get in first.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero.webp">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<style>
+  :root{
+    --bg:#F5F6FA; --card:#FFFFFF; --ink:#17171F; --muted:#5F5F70; --line:#E6E7F0;
+    --pink:#FF6EAF; --pink-deep:#C2185B; --violet:#7C3AED; --lavender:#EDE9FE; --mint:#D9F5E8;
+    --gold-bg:#FFF6DB; --gold-line:#EBCB6B; --gold-text:#6D4C00;
+    --err:#B42318; --err-bg:#FEF3F2;
+    --radius:20px; --shadow:0 12px 32px rgba(23,23,31,.08);
+    --grad:linear-gradient(135deg,#C2185B 0%,#7C3AED 100%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:96px}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg); color:var(--ink); font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  section{padding:88px 0}
+  h1{font-size:clamp(44px,7vw,72px);line-height:1.05;letter-spacing:-.02em;font-weight:800}
+  h2{font-size:clamp(30px,4vw,40px);line-height:1.15;letter-spacing:-.015em;font-weight:800}
+  h3{font-size:21px;line-height:1.3;font-weight:700}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;letter-spacing:.02em;
+    color:var(--pink-deep);background:#FDE8F1;border:1px solid #F9C6DD;border-radius:999px;padding:7px 14px}
+  .section-head{max-width:640px;margin-bottom:48px}
+  .section-head p{color:var(--muted);margin-top:12px;font-size:18px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:13px 26px;
+    border-radius:999px;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:16px;text-decoration:none;
+    transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+  .btn:focus-visible,.nav-link:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid rgba(194,24,91,.45);outline-offset:2px}
+  .btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 24px rgba(194,24,91,.28)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(194,24,91,.34)}
+  .btn-primary:disabled{opacity:.6;cursor:not-allowed;transform:none}
+  .btn-ghost{background:#fff;border:1.5px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:#C9C9DE;transform:translateY(-2px);box-shadow:0 8px 20px rgba(23,23,31,.08)}
+  .btn-dark{background:var(--ink);color:#fff}
+  .btn-dark:hover{transform:translateY(-2px)}
+  .x-icon{width:17px;height:17px;flex:none}
+
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.78);
+    -webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);
+    border-bottom:1px solid rgba(230,231,240,.9)}
+  .header-inner{display:flex;align-items:center;gap:20px;height:72px}
+  .brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-.01em}
+  .brand img{width:40px;height:40px;border-radius:50%;box-shadow:0 4px 12px rgba(23,23,31,.16)}
+  .brand span em{font-style:normal;color:var(--pink-deep)}
+  nav{margin-left:auto;display:flex;align-items:center;gap:4px}
+  .nav-link{padding:9px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:15px;color:var(--ink)}
+  .nav-link:hover{background:#F0F0F7}
+  .header-actions{display:flex;align-items:center;gap:10px}
+  .follow-btn{min-height:40px;padding:9px 16px;font-size:14px}
+  .cta-btn{min-height:40px;padding:9px 18px;font-size:14px}
+  .menu-btn{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;border-radius:12px;align-items:center;justify-content:center}
+  .menu-btn svg{width:24px;height:24px}
+
+  /* ---------- hero ---------- */
+  .hero{padding:88px 0 72px;position:relative;overflow:hidden;
+    background:radial-gradient(720px 420px at 85% -10%,#FDE8F1 0%,transparent 60%),
+               radial-gradient(640px 420px at -10% 30%,#EDE9FE 0%,transparent 55%),
+               radial-gradient(560px 380px at 60% 110%,#D9F5E8 0%,transparent 55%),var(--bg)}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .hero h1{margin:20px 0 18px}
+  .hero h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .lede{font-size:19px;color:var(--muted);max-width:520px}
+  .hero .lede strong{color:var(--ink)}
+  .hero-actions{display:flex;gap:12px;margin:30px 0 40px;flex-wrap:wrap}
+  .stats{display:flex;gap:0;border-top:1px solid var(--line);padding-top:26px;max-width:520px}
+  .stat{flex:1}
+  .stat + .stat{border-left:1px solid var(--line);padding-left:24px}
+  .stat b{display:block;font-size:26px;letter-spacing:-.02em}
+  .stat span{font-size:14px;color:var(--muted)}
+  .hero-visual{position:relative;display:flex;justify-content:center}
+  .hero-arch{width:min(460px,100%);border-radius:230px 230px 28px 28px;overflow:hidden;position:relative;
+    background:linear-gradient(180deg,#FDE8F1,#EDE9FE);box-shadow:0 30px 60px rgba(124,58,237,.18)}
+  .hero-arch img{width:100%;height:auto}
+  .hero-badge{position:absolute;left:-8px;bottom:36px;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.92);
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid #fff;border-radius:16px;
+    padding:12px 16px;box-shadow:0 14px 30px rgba(23,23,31,.14)}
+  .hero-badge .dot{width:10px;height:10px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
+  .hero-badge b{font-size:15px;display:block;line-height:1.3}
+  .hero-badge span{font-size:13px;color:var(--muted)}
+  .butterfly{position:absolute;width:34px;height:34px;opacity:.85;animation:float 6s ease-in-out infinite;pointer-events:none}
+  .butterfly.b1{top:6%;right:6%;animation-delay:.6s}
+  .butterfly.b2{bottom:16%;right:-2%;width:26px;height:26px;animation-delay:1.8s}
+  .butterfly.b3{top:38%;left:-4%;width:24px;height:24px;animation-delay:3s}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-14px) rotate(5deg)}}
+
+  /* ---------- steps ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 28px;
+    box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px;transition:transform .2s ease,box-shadow .2s ease}
+  .step:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(23,23,31,.12)}
+  .step-num{width:44px;height:44px;border-radius:50%;background:var(--grad);color:#fff;font-weight:800;font-size:18px;
+    display:flex;align-items:center;justify-content:center}
+  .step p{color:var(--muted);flex:1}
+  .step .btn{align-self:flex-start;min-height:44px;padding:10px 18px;font-size:15px}
+
+  /* ---------- waitlist form ---------- */
+  #waitlist{background:linear-gradient(180deg,var(--bg),#FDF0F6 45%,var(--bg))}
+  .form-card{max-width:660px;margin:0 auto;background:rgba(255,255,255,.86);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    border:1px solid #fff;border-radius:28px;box-shadow:0 24px 56px rgba(124,58,237,.14);padding:44px 40px}
+  .form-card .section-head{margin-bottom:28px;text-align:center;margin-left:auto;margin-right:auto}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-weight:700;font-size:15px;margin-bottom:8px}
+  .field input{width:100%;min-height:56px;padding:14px 16px;font:inherit;font-size:16px;color:var(--ink);
+    background:#fff;border:1.5px solid var(--line);border-radius:14px;transition:border-color .15s ease,box-shadow .15s ease}
+  .field input::placeholder{color:#9A9AAC}
+  .field input:focus{border-color:var(--pink-deep);box-shadow:0 0 0 4px rgba(194,24,91,.12);outline:none}
+  .field input.invalid{border-color:var(--err);background:var(--err-bg)}
+  .field .hint{font-size:13.5px;color:var(--muted);margin-top:7px}
+  .field .err-msg{display:none;font-size:13.5px;color:var(--err);margin-top:7px;font-weight:600}
+  .field .err-msg.show{display:block}
+  .check-line{display:flex;align-items:center;gap:10px;min-height:28px;margin:2px 0 18px;font-size:15px}
+  .spinner{width:18px;height:18px;border-radius:50%;border:2.5px solid #E6C6D6;border-top-color:var(--pink-deep);
+    animation:spin .8s linear infinite;flex:none}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .badge{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14px;border-radius:999px;padding:6px 13px}
+  .badge.gtd{background:var(--gold-bg);border:1px solid var(--gold-line);color:var(--gold-text)}
+  .badge.wl{background:var(--lavender);border:1px solid #D5C9F5;color:#5B21B6}
+  .badge .b-dot{width:8px;height:8px;border-radius:50%;background:currentColor}
+  .check-note{color:var(--muted)}
+  .form-card .btn-primary{width:100%;min-height:56px;font-size:17px}
+  .form-note{text-align:center;font-size:13.5px;color:var(--muted);margin-top:16px}
+  .success{display:none;text-align:center;padding:8px 0 4px}
+  .success.show{display:block}
+  .success .ok{width:68px;height:68px;margin:0 auto 18px;border-radius:50%;background:var(--mint);
+    display:flex;align-items:center;justify-content:center}
+  .success .ok svg{width:32px;height:32px}
+  .success h3{font-size:24px;margin-bottom:8px}
+  .success p{color:var(--muted);max-width:440px;margin:0 auto 18px}
+  .success .who{display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:20px}
+  .chip{background:#F0F0F7;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:600}
+  .chip code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
+  .preview-note{margin-top:18px;font-size:13px;color:#8A6D00;background:var(--gold-bg);border:1px solid var(--gold-line);
+    border-radius:12px;padding:10px 14px;text-align:left}
+
+  /* ---------- showcase ---------- */
+  .showcase-row{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 18px;
+    scrollbar-width:thin;scrollbar-color:#C9C9DE transparent}
+  .show-card{flex:0 0 264px;scroll-snap-align:start;background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .2s ease}
+  .show-card:hover{transform:translateY(-4px)}
+  .show-card img{width:100%;aspect-ratio:1/1;object-fit:cover}
+  .show-card .cap{padding:14px 16px}
+  .show-card .cap b{font-size:15px;display:block}
+  .show-card .cap span{font-size:13.5px;color:var(--muted)}
+
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:760px}
+  details{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden}
+  summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:20px 22px;font-weight:700;font-size:17px}
+  summary::-webkit-details-marker{display:none}
+  summary .chev{flex:none;width:26px;height:26px;border-radius:50%;background:#F0F0F7;display:flex;align-items:center;justify-content:center;
+    transition:transform .2s ease}
+  details[open ] summary .chev{transform:rotate(180deg)}
+  details p{padding:0 22px 22px;color:var(--muted)}
+
+  /* ---------- footer ---------- */
+  footer{background:#17171F;color:#C9C9D6;padding:64px 0 0}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.4fr;gap:48px;padding-bottom:48px}
+  .foot-brand .brand{color:#fff;margin-bottom:14px}
+  .foot-brand p{font-size:15px;max-width:340px}
+  .socials{display:flex;gap:10px;margin-top:20px}
+  .social-pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;text-decoration:none;
+    background:#23232E;border:1px solid #33333F;color:#fff;font-size:14px;font-weight:600;transition:background .15s ease}
+  .social-pill:hover{background:#2E2E3A}
+  footer h4{color:#fff;font-size:15px;margin-bottom:16px}
+  .foot-links{list-style:none}
+  .foot-links li{margin-bottom:11px}
+  .foot-links a{text-decoration:none;font-size:15px}
+  .foot-links a:hover{color:#fff}
+  .foot-note{font-size:13.5px;line-height:1.7}
+  .foot-bottom{border-top:1px solid #2A2A35;padding:22px 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13.5px;color:#8E8EA0}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:48px}
+    .hero{padding:64px 0 56px}
+    .steps{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:36px}
+    nav{position:fixed;top:72px;left:0;right:0;background:rgba(255,255,255,.97);
+      -webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);
+      flex-direction:column;align-items:stretch;gap:4px;padding:14px 20px 20px;border-bottom:1px solid var(--line);
+      margin-left:0;display:none;box-shadow:0 20px 40px rgba(23,23,31,.12)}
+    nav.open{display:flex}
+    .nav-link{padding:13px 14px;font-size:16px}
+    .menu-btn{display:flex;margin-left:auto}
+    .header-actions .follow-btn{display:none}
+    .hero-badge{left:0}
+  }
+  @media (max-width:560px){
+    section{padding:64px 0}
+    .form-card{padding:32px 22px}
+    .stats b{font-size:22px}
+    .hero-actions .btn{flex:1;justify-content:center}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .butterfly,.spinner{animation:none}
+    *{transition:none !important}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="bfly" viewBox="0 0 32 32">
+      <g>
+        <path fill="#FF6EAF" d="M16 15 C12 6 4 5 4.5 11 C5 15.5 11 16.5 16 15 Z"/>
+        <path fill="#FF6EAF" d="M16 15 C20 6 28 5 27.5 11 C27 15.5 21 16.5 16 15 Z"/>
+        <path fill="#C9A7F5" d="M16 16.5 C12.5 19 8 20 8.5 24 C9 27.5 13.5 26.5 16 21 Z"/>
+        <path fill="#C9A7F5" d="M16 16.5 C19.5 19 24 20 23.5 24 C23 27.5 18.5 26.5 16 21 Z"/>
+        <ellipse cx="16" cy="17" rx="1.6" ry="5.5" fill="#17171F"/>
+      </g>
+    </symbol>
+    <symbol id="x-logo" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644Z"/>
+    </symbol>
+    <symbol id="check" viewBox="0 0 24 24">
+      <path fill="none" stroke="#15803D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M4 12.5 9.5 18 20 6.5"/>
+    </symbol>
+    <symbol id="chev" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Muse World home">
+      <img src="assets/logo.webp" alt="Muse, a soft blue fluffy creature with a flower crown" width="40" height="40">
+      <span>Muse <em>World</em></span>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav id="main-nav" aria-label="Main">
+      <a class="nav-link" href="#how">How to join</a>
+      <a class="nav-link" href="#waitlist">Waitlist</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-dark follow-btn" href="https://x.com/musenftxyz" target="_blank" rel="noopener">
+        <svg class="x-icon" aria-hidden="true"><use href="#x-logo"/></svg> Follow
+      </a>
+      <a class="btn btn-primary cta-btn" href="#waitlist">Join Waitlist</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Free mint on Robinhood</span>
+        <h1>Muse <span class="grad">World</span></h1>
+        <p class="lede"><strong>3,333 soft fluffy creatures</strong>, each one unique, each with a pink butterfly on its head. Free mint on Robinhood, gas only. Foxora holders get in first.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#waitlist">Join the Waitlist</a>
+          <a class="btn btn-ghost" href="https://x.com/musenftxyz/article/2123693661418590489" target="_blank" rel="noopener">Read the article</a>
+        </div>
+        <div class="stats" role="list">
+          <div class="stat" role="listitem"><b>3,333</b><span>Total supply</span></div>
+          <div class="stat" role="listitem"><b>Free</b><span>Mint price</span></div>
+          <div class="stat" role="listitem"><b>Gas only</b><span>What you pay</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg class="butterfly b1" aria-hidden="true"><use href="#bfly"/></svg>
+        <svg class="butterfly b2" aria-hidden="true"><use href="#bfly"/></svg>
+        <svg class="butterfly b3" aria-hidden="true"><use href="#bfly"/></svg>
+        <div class="hero-arch">
+          <img src="assets/hero.webp" alt="Muse, a soft blue fluffy creature with a flower crown and a pink butterfly on its head" width="1000" height="1000" fetchpriority="high">
+        </div>
+        <div class="hero-badge">
+          <span class="dot" aria-hidden="true"></span>
+          <div><b>Waitlist is open</b><span>Foxora holders get in first</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to join -->
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How to join</span>
+        <h2 style="margin-top:16px">Three small steps to the waitlist</h2>
+        <p>Do all three, then add your address below. It takes about a minute.</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <span class="step-num" aria-hidden="true">1</span>
+          <h3>Follow @musenftxyz</h3>
+          <p>Follow the Muse World account on X so you do not miss the mint announcement.</p>
+          <a class="btn btn-ghost" href="https://x.com/musenftxyz" target="_blank" rel="noopener">
+            <svg class="x-icon" aria-hidden="true"><use href="#x-logo"/></svg> Follow on X
+          </a>
+        </article>
+        <article class="step">
+          <span class="step-num" aria-hidden="true">2</span>
+          <h3>Like, comment and repost</h3>
+          <p>Show some love on the launch article so more people find Muse World.</p>
+          <a class="btn btn-ghost" href="https://x.com/musenftxyz/status/2123693661418590489" target="_blank" rel="noopener">Open the article post</a>
+        </article>
+        <article class="step">
+          <span class="step-num" aria-hidden="true">3</span>
+          <h3>Submit your EVM address</h3>
+          <p>Add your X username and EVM address below. Foxora holders are checked on-chain and get in first.</p>
+          <a class="btn btn-ghost" href="#waitlist">Go to the form</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Waitlist form -->
+  <section id="waitlist">
+    <div class="wrap">
+      <div class="form-card">
+        <div class="section-head">
+          <span class="eyebrow">Waitlist</span>
+          <h2 style="margin-top:16px">Save your spot</h2>
+          <p>Foxora holders get in first. We check your address on-chain, right here.</p>
+        </div>
+        <form id="waitlist-form" novalidate>
+          <div class="field">
+            <label for="x-user">Your X username</label>
+            <input id="x-user" name="x-user" type="text" placeholder="0xArcherxyz" autocomplete="username" maxlength="16" required>
+            <p class="hint">Without the @ sign. We use it to confirm your like, comment and repost.</p>
+            <p class="err-msg" id="x-err">Enter a valid X username, letters, numbers and underscores only.</p>
+          </div>
+          <div class="field">
+            <label for="evm-addr">Your EVM address</label>
+            <input id="evm-addr" name="evm-addr" type="text" placeholder="0x..." autocomplete="off" spellcheck="false" required>
+            <p class="hint">The wallet you will mint with. No wallet connection, no signature, nothing is stored in your browser except a local backup note.</p>
+            <p class="err-msg" id="addr-err">That address does not look right. It must start with 0x and be 42 characters long.</p>
+          </div>
+          <div class="check-line" id="check-line" aria-live="polite"></div>
+          <button class="btn btn-primary" type="submit" id="submit-btn">Join the waitlist</button>
+          <p class="form-note">One entry per wallet. Foxora holders mint first, then the waitlist opens in order.</p>
+        </form>
+        <div class="success" id="success" role="status">
+          <div class="ok"><svg aria-hidden="true"><use href="#check"/></svg></div>
+          <h3>You are on the list</h3>
+          <p id="success-text">Your spot is saved. Watch @musenftxyz for the mint date.</p>
+          <div class="who">
+            <span class="chip" id="success-user"></span>
+            <span class="chip"><code id="success-addr"></code></span>
+            <span class="badge wl" id="success-badge"><span class="b-dot"></span><span id="success-badge-text">Waitlist</span></span>
+          </div>
+          <p class="preview-note" id="preview-note" hidden>Preview note: the signup sheet is not connected yet, so this entry is saved on this device only. It will be sent to the sheet once the form is connected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase -->
+  <section id="showcase" style="padding-top:24px">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Meet a few Muses</span>
+        <h2 style="margin-top:16px">Every Muse is one of a kind</h2>
+        <p>Its own fur color, its own butterfly, its own glasses, its own cute element, its own flower, and its own head design. No two are the same.</p>
+      </div>
+      <div class="showcase-row">
+        <article class="show-card">
+          <img src="assets/muse-01.webp" alt="Blue Muse with a rainbow butterfly, heart glasses and a flower crown" width="640" height="640" loading="lazy">
+          <div class="cap"><b>Blue fur, flower crown</b><span>Rainbow butterfly, heart glasses</span></div>
+        </article>
+        <article class="show-card">
+          <img src="assets/muse-02.webp" alt="Golden Muse with a rainbow butterfly, sunglasses and a flower crown" width="640" height="640" loading="lazy">
+          <div class="cap"><b>Golden fur, flower crown</b><span>Rainbow butterfly, sunglasses</span></div>
+        </article>
+        <article class="show-card">
+          <img src="assets/muse-03.webp" alt="Lavender Muse with a blue butterfly, goggles and a gold crown" width="640" height="640" loading="lazy">
+          <div class="cap"><b>Lavender fur, gold crown</b><span>Blue butterfly, goggles</span></div>
+        </article>
+        <article class="show-card">
+          <img src="assets/muse-05.webp" alt="Peach Muse with a blue butterfly, sunglasses and bunny ears" width="640" height="640" loading="lazy">
+          <div class="cap"><b>Peach fur, bunny ears</b><span>Blue butterfly, sunglasses</span></div>
+        </article>
+        <article class="show-card">
+          <img src="assets/muse-07.webp" alt="Golden Muse with a blue butterfly, cat-eye glasses and a gold crown" width="640" height="640" loading="lazy">
+          <div class="cap"><b>Golden fur, gold crown</b><span>Blue butterfly, cat-eye glasses</span></div>
+        </article>
+        <article class="show-card">
+          <img src="assets/muse-09.webp" alt="White Muse with a rainbow butterfly, goggles and a tiara" width="640" height="640" loading="lazy">
+          <div class="cap"><b>White fur, tiara</b><span>Rainbow butterfly, goggles</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding-top:24px">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2 style="margin-top:16px">Good questions</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Is the mint really free?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
+          <p>Yes. Each Muse is free to mint. You only pay the network gas fee on Robinhood Chain, which is usually a few cents.</p>
+        </details>
+        <details>
+          <summary>Which chain is it on?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
+          <p>Robinhood Chain, chain ID 4663. You pay gas in ETH on that chain. No wallet connection is needed to join the waitlist.</p>
+        </details>
+        <details>
+          <summary>How many Muses are there?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
+          <p>3,333 unique Muses. No two are the same.</p>
+        </details>
+        <details>
+          <summary>What is a blind reveal?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
+          <p>The artwork stays hidden while the mint runs. Once all 3,333 are minted, every Muse is revealed at once.</p>
+        </details>
+        <details>
+          <summary>I hold a Foxora. What do I get?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
+          <p>Foxora holders get in first with guaranteed access, then the waitlist opens. Paste your address in the form above and we check it on-chain.</p>
+        </details>
+        <details>
+          <summary>When is the mint?<span class="chev"><svg width="14" height="14" aria-hidden="true"><use href="#chev"/></svg></span></summary>
+          <p>The date is not set yet. Join the waitlist and follow @musenftxyz for the announcement.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Muse World home">
+          <img src="assets/logo.webp" alt="" width="40" height="40">
+          <span>Muse <em>World</em></span>
+        </a>
+        <p>3,333 soft fluffy creatures, each one unique, each with a pink butterfly on its head.</p>
+        <div class="socials">
+          <a class="social-pill" href="https://x.com/musenftxyz" target="_blank" rel="noopener">
+            <svg class="x-icon" aria-hidden="true"><use href="#x-logo"/></svg> @musenftxyz
+          </a>
+          <a class="social-pill" href="https://opensea.io/collection/foxora" target="_blank" rel="noopener">Foxora on OpenSea</a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="foot-links">
+          <li><a href="#how">How to join</a></li>
+          <li><a href="#waitlist">Join the waitlist</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="https://x.com/musenftxyz/article/2123693661418590489" target="_blank" rel="noopener">Read the article</a></li>
+          <li><a href="https://opensea.io/collection/foxora" target="_blank" rel="noopener">Foxora on OpenSea</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About Muse World</h4>
+        <p class="foot-note">Muse World is an independent fan project. It is not Meta, not official, and not endorsed by Meta. There is no partnership, no collaboration, and no business relationship of any kind between Muse World and Meta or Muse. Free mint on Robinhood Chain, gas only.</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Muse World. All rights reserved.</span>
+      <span>Free mint on Robinhood &middot; Foxora holders get in first</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- form endpoint ----------
+     Google Form response endpoint. Filled in once the form exists:
+     formId: the ID from the form URL,
+     entryX: the question ID for the X username field,
+     entryAddress: the question ID for the EVM address field.
+     The page POSTs to https://docs.google.com/forms/d/e/<formId>/formResponse
+     with entry.<id> values. A sync job copies new responses into the
+     "Muse World Waitlist" Google Sheet. Until this is filled in, submissions
+     are kept in a localStorage backup only (see below) and the preview note
+     in the success panel tells the reviewer so. */
+  var FORM_CONFIG = { formId: "", entryX: "", entryAddress: "" };
+
+  /* ---------- mobile menu ---------- */
+  var menuBtn = document.getElementById("menu-btn");
+  var nav = document.getElementById("main-nav");
+  menuBtn.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+  nav.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      nav.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  /* ---------- Foxora on-chain check ----------
+     Same pattern as the Foxora airdrop checker: every public RPC endpoint
+     Chainlist lists for Robinhood Chain (4663). A check asks all of them at
+     once and uses the first valid answer, then retries the whole round once.
+     Contract: 0x1b9b8a7f5caed351548b82016099660dad28e718, balanceOf 0x70a08231. */
+  var RPCS = [
+    "https://rpc.mainnet.chain.robinhood.com",
+    "https://robinhood-rpc.publicnode.com",
+    "https://robinhood.drpc.org",
+    "https://robinhood.daybreak-rpc.network",
+    "https://robinhood-mainnet-rpc.blockreq.com/v1/rpc/public",
+    "https://api.blockvectra.com/v1/robinhood_mainnet/public"
+  ];
+  var RPC_TIMEOUT = 10000;
+  var CONTRACT = "0x1b9b8a7f5caed351548b82016099660dad28e718";
+
+  function rpcCall(url, data) {
+    return new Promise(function (resolve, reject) {
+      var ctrl = "AbortController" in window ? new AbortController() : null;
+      var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, RPC_TIMEOUT);
+      function fail(e) { clearTimeout(timer); reject(e); }
+      fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        cache: "no-store",
+        body: JSON.stringify({
+          jsonrpc: "2.0", id: 1, method: "eth_call",
+          params: [{ to: CONTRACT, data: data }, "latest"]
+        }),
+        signal: ctrl ? ctrl.signal : undefined
+      })
+        .then(function (r) { if (!r.ok) throw new Error("rpc " + r.status); return r.json(); })
+        .then(function (j) {
+          clearTimeout(timer);
+          if (!j || j.error || typeof j.result !== "string") { reject(new Error("bad reply")); return; }
+          resolve(j.result);
+        })
+        .catch(fail);
+    });
+  }
+
+  function fetchBalance(data) {
+    return new Promise(function (resolve, reject) {
+      var remaining = RPCS.length, done = false;
+      RPCS.forEach(function (url) {
+        rpcCall(url, data).then(
+          function (result) { if (!done) { done = true; resolve(result); } },
+          function () { remaining -= 1; if (remaining === 0 && !done) reject(new Error("no endpoint answered")); }
+        );
+      });
+    });
+  }
+
+  function checkFoxora(addr) {
+    var data = "0x70a08231" + addr.slice(2).toLowerCase().padStart(64, "0");
+    return fetchBalance(data)
+      .catch(function () {
+        return new Promise(function (res) { setTimeout(res, 1200); })
+          .then(function () { return fetchBalance(data); });
+      })
+      .then(function (result) { return Number(BigInt(result)); });
+  }
+
+  /* ---------- form ---------- */
+  var form = document.getElementById("waitlist-form");
+  var xInput = document.getElementById("x-user");
+  var addrInput = document.getElementById("evm-addr");
+  var xErr = document.getElementById("x-err");
+  var addrErr = document.getElementById("addr-err");
+  var checkLine = document.getElementById("check-line");
+  var submitBtn = document.getElementById("submit-btn");
+  var successBox = document.getElementById("success");
+
+  var ADDR_RE = /^0x[0-9a-fA-F]{40}$/;
+  var USER_RE = /^[A-Za-z0-9_]{1,15}$/;
+  var foxCount = null;      // null = unknown, number = on-chain foxes
+  var checkToken = 0;       // guards against out-of-order RPC replies
+  var checkTimer = null;
+
+  // Restore a local backup of the last entry, so a refresh never loses typing.
+  // (localStorage backup; the live record is the Google Sheet once connected.)
+  try {
+    var saved = JSON.parse(localStorage.getItem("muse-waitlist-draft") || "null");
+    if (saved) {
+      if (saved.x) xInput.value = saved.x;
+      if (saved.addr) addrInput.value = saved.addr;
+    }
+  } catch (e) { /* storage unavailable, form still works */ }
+
+  function saveDraft() {
+    try {
+      localStorage.setItem("muse-waitlist-draft", JSON.stringify({
+        x: xInput.value.trim().replace(/^@/, ""),
+        addr: addrInput.value.trim()
+      }));
+    } catch (e) { /* storage unavailable, form still works */ }
+  }
+
+  function validUser(v) { return USER_RE.test(v.replace(/^@/, "")); }
+  function validAddr(v) { return ADDR_RE.test(v.trim()); }
+
+  function setCheck(html) { checkLine.innerHTML = html; }
+
+  function runCheck(addr) {
+    var token = ++checkToken;
+    foxCount = null;
+    setCheck('<span class="spinner" aria-hidden="true"></span><span class="check-note">Checking your Foxora on-chain...</span>');
+    checkFoxora(addr)
+      .then(function (count) {
+        if (token !== checkToken) return;
+        foxCount = count;
+        if (count > 0) {
+          setCheck('<span class="badge gtd"><span class="b-dot"></span>GTD, you are in first</span>' +
+            '<span class="check-note">You hold ' + count + (count === 1 ? ' Foxora' : ' Foxora foxes') + '.</span>');
+        } else {
+          setCheck('<span class="badge wl"><span class="b-dot"></span>Waitlist</span>' +
+            '<span class="check-note">No Foxora found on this address, you join the waitlist.</span>');
+        }
+      })
+      .catch(function () {
+        if (token !== checkToken) return;
+        foxCount = null;
+        setCheck('<span class="check-note">On-chain check is unavailable right now. You can still join, we will check your Foxora before the mint.</span>');
+      });
+  }
+
+  addrInput.addEventListener("input", function () {
+    addrErr.classList.remove("show");
+    addrInput.classList.remove("invalid");
+    saveDraft();
+    clearTimeout(checkTimer);
+    var v = addrInput.value.trim();
+    if (!v) { setCheck(""); checkToken++; foxCount = null; return; }
+    if (!validAddr(v)) { setCheck(""); checkToken++; foxCount = null; return; }
+    checkTimer = setTimeout(function () { runCheck(v); }, 600);
+  });
+
+  xInput.addEventListener("input", function () {
+    xErr.classList.remove("show");
+    xInput.classList.remove("invalid");
+    saveDraft();
+  });
+
+  // Run the check immediately if the address field is already filled (restore).
+  if (validAddr(addrInput.value)) runCheck(addrInput.value.trim());
+
+  function showSuccess(user, addr) {
+    document.getElementById("success-user").textContent = "@" + user;
+    document.getElementById("success-addr").textContent =
+      addr.slice(0, 6) + "..." + addr.slice(-4);
+    var badge = document.getElementById("success-badge");
+    var badgeText = document.getElementById("success-badge-text");
+    if (foxCount !== null && foxCount > 0) {
+      badge.className = "badge gtd";
+      badgeText.textContent = "GTD, you are in first";
+      document.getElementById("success-text").textContent =
+        "You hold Foxora, so you mint first. Watch @musenftxyz for the mint date.";
+    } else {
+      badge.className = "badge wl";
+      badgeText.textContent = "Waitlist";
+      document.getElementById("success-text").textContent =
+        "Your spot is saved. Watch @musenftxyz for the mint date.";
+    }
+    // Shown only while the sheet endpoint is not connected yet.
+    document.getElementById("preview-note").hidden = !!FORM_CONFIG.formId;
+    form.style.display = "none";
+    successBox.classList.add("show");
+    successBox.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var user = xInput.value.trim().replace(/^@/, "");
+    var addr = addrInput.value.trim();
+    var ok = true;
+    if (!validUser(user)) {
+      xErr.classList.add("show"); xInput.classList.add("invalid"); ok = false;
+    }
+    if (!validAddr(addr)) {
+      addrErr.classList.add("show"); addrInput.classList.add("invalid"); ok = false;
+    }
+    if (!ok) {
+      (validUser(user) ? addrInput : xInput).focus();
+      return;
+    }
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner" aria-hidden="true"></span> Saving your spot...';
+
+    function finish() {
+      // Local backup of the submitted entry (see comment above).
+      try {
+        localStorage.setItem("muse-waitlist-entry", JSON.stringify({
+          x: user, addr: addr, foxes: foxCount, status: (foxCount > 0 ? "GTD" : "Waitlist"),
+          at: new Date().toISOString()
+        }));
+        localStorage.removeItem("muse-waitlist-draft");
+      } catch (err) { /* storage unavailable, submit still counts */ }
+      showSuccess(user, addr);
+    }
+
+    if (!FORM_CONFIG.formId) { finish(); return; }
+    var body = new URLSearchParams();
+    body.append("entry." + FORM_CONFIG.entryX, user);
+    body.append("entry." + FORM_CONFIG.entryAddress, addr);
+    fetch("https://docs.google.com/forms/d/e/" + FORM_CONFIG.formId + "/formResponse", {
+      method: "POST", mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: body.toString()
+    }).then(finish, finish);
+  });
+})();
+</script>
+</body>
+</html>
