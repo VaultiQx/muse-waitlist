@@ -28,7 +28,8 @@
   }
   img{max-width:100%;display:block}
   a{color:inherit}
-  .wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+  .wrap{max-width:1440px;margin:0 auto;padding:0 24px}
+  @media (min-width:1024px){.wrap{padding:0 40px}}
   section{padding:96px 0}
   h1{font-size:clamp(48px,7vw,72px);line-height:1.05;letter-spacing:-.02em;font-weight:800}
   h2{font-size:clamp(30px,4vw,40px);line-height:1.15;letter-spacing:-.015em;font-weight:800}
@@ -69,34 +70,32 @@
 
   /* ---------- hero ---------- */
   .hero{padding:96px 0 72px}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
   .hero h1{margin:20px 0 18px}
   .hero h1 .accent{color:var(--accent)}
-  .hero .lede{font-size:19px;color:var(--body);max-width:520px}
+  .hero .lede{font-size:19px;color:var(--body);max-width:560px}
   .hero .lede strong{color:var(--ink)}
-  .hero-actions{display:flex;gap:12px;margin:30px 0 40px;flex-wrap:wrap}
-  .stats{display:flex;gap:0;border-top:1px solid var(--line);padding-top:26px;max-width:520px}
+  .hero-actions{display:flex;gap:12px;margin:32px 0 0;flex-wrap:wrap}
+  .hero-status{display:flex;align-items:center;gap:9px;margin:28px 0 0;font-size:15px;font-weight:600;color:var(--body)}
+  .hero-status .dot{width:10px;height:10px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.18);flex:none}
+  .stats{display:flex;gap:0;border-top:1px solid var(--line);padding-top:26px;margin-top:24px;max-width:560px}
   .stat{flex:1}
   .stat + .stat{border-left:1px solid var(--line);padding-left:24px}
   .stat b{display:block;font-size:26px;letter-spacing:-.02em}
   .stat span{font-size:14px;color:var(--muted)}
   .hero-visual{position:relative;display:flex;justify-content:center}
-  .hero-arch{width:min(460px,100%);border-radius:230px 230px 28px 28px;overflow:hidden;position:relative;
+  .hero-arch{width:min(560px,100%);border-radius:280px 280px 28px 28px;overflow:hidden;position:relative;
     background:#FCE8F0;box-shadow:0 24px 48px rgba(12,12,12,.10)}
   .hero-arch img{width:100%;height:auto}
-  .hero-badge{position:absolute;left:-8px;bottom:36px;display:flex;align-items:center;gap:10px;background:#fff;
-    border:1px solid var(--line);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow)}
-  .hero-badge .dot{width:10px;height:10px;border-radius:50%;background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
-  .hero-badge b{font-size:15px;display:block;line-height:1.3}
 
   /* ---------- tasks ---------- */
-  .progress{max-width:720px;margin-bottom:32px}
+  .progress{margin-bottom:32px}
   .progress-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:10px}
   .progress-top b{font-size:16px}
   .progress-top span{font-size:14px;color:var(--muted)}
   .progress-bar{height:6px;border-radius:999px;background:#EDEBE6;overflow:hidden}
   .progress-bar span{display:block;height:100%;width:0%;border-radius:999px;background:var(--accent);transition:width .4s ease}
-  .tasks{display:flex;flex-direction:column;gap:16px;max-width:860px}
+  .tasks{display:flex;flex-direction:column;gap:16px}
   .task{display:flex;align-items:center;gap:20px;background:var(--card);border:1px solid var(--line);
     border-radius:var(--radius);padding:24px 28px;box-shadow:var(--shadow);transition:opacity .25s ease,transform .2s ease}
   .task:hover{transform:translateY(-2px)}
@@ -198,8 +197,22 @@
   .slide-dot:focus-visible{outline:3px solid rgba(194,24,91,.45);outline-offset:2px}
   .slide-count{font-size:14px;font-weight:700;color:var(--muted);min-width:44px;text-align:center}
 
+  /* ---------- gallery grid (wide screens; the slideshow is mobile-only) ---------- */
+  .show-grid{display:none}
+  .grid-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .grid-card img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff}
+  .grid-cap{padding:16px 18px 15px;text-align:center}
+  .grid-cap b{font-size:16px;display:block}
+  .grid-cap span{font-size:14px;color:var(--muted)}
+  @media (min-width:768px){
+    .slideshow{display:none}
+    .show-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  }
+  @media (min-width:1200px){
+    .show-grid{grid-template-columns:repeat(4,1fr)}
+  }
+
   /* ---------- FAQ ---------- */
-  .faq-list{max-width:760px}
   details{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden}
   summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;
     padding:20px 22px;font-weight:700;font-size:17px}
@@ -213,7 +226,7 @@
   footer{background:#111113;color:#C9C9D6;padding:64px 0 0}
   .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.4fr;gap:48px;padding-bottom:48px}
   .foot-brand .brand{color:#fff;margin-bottom:14px}
-  .socials{display:flex;gap:10px;margin-top:20px}
+  .socials{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
   .social-pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;text-decoration:none;
     background:#23232E;border:1px solid #33333F;color:#fff;font-size:14px;font-weight:600;transition:background .15s ease}
   .social-pill:hover{background:#2E2E3A}
@@ -237,7 +250,6 @@
     .nav-link{padding:13px 14px;font-size:16px}
     .menu-btn{display:flex;margin-left:auto}
     .header-actions .follow-btn{display:none}
-    .hero-badge{left:0}
   }
   @media (max-width:640px){
     section{padding:64px 0}
@@ -318,6 +330,7 @@
           <a class="btn btn-primary join-link" href="#steps">Join the Waitlist</a>
           <a class="btn btn-ghost" href="https://x.com/musenftxyz/status/2123693661418590489" target="_blank" rel="noopener">Read the post</a>
         </div>
+        <p class="hero-status"><span class="dot" aria-hidden="true"></span>Waitlist is open</p>
         <div class="stats" role="list">
           <div class="stat" role="listitem"><b>3,333</b><span>Total supply</span></div>
           <div class="stat" role="listitem"><b>Free</b><span>Mint price</span></div>
@@ -327,10 +340,6 @@
       <div class="hero-visual">
         <div class="hero-arch">
           <img src="assets/hero.webp" alt="Muse, a soft blue fluffy creature with a flower crown and a pink butterfly on its head" width="1000" height="1000" fetchpriority="high">
-        </div>
-        <div class="hero-badge">
-          <span class="dot" aria-hidden="true"></span>
-          <div><b>Waitlist is open</b></div>
         </div>
       </div>
     </div>
@@ -483,6 +492,32 @@
           <div class="slide-dots" id="slide-dots" role="tablist" aria-label="Choose a Muse"></div>
           <span class="slide-count" id="slide-count" aria-live="polite">1 / 6</span>
         </div>
+      </div>
+      <div class="show-grid" id="show-grid" role="list" aria-label="Muse gallery">
+        <figure class="grid-card" role="listitem">
+          <img src="assets/muse-01.webp" alt="Blue Muse with a rainbow butterfly, heart glasses and a flower crown" loading="lazy">
+          <figcaption class="grid-cap"><b>Blue fur, flower crown</b><span>Rainbow butterfly, heart glasses</span></figcaption>
+        </figure>
+        <figure class="grid-card" role="listitem">
+          <img src="assets/muse-02.webp" alt="Golden Muse with a rainbow butterfly, sunglasses and a flower crown" loading="lazy">
+          <figcaption class="grid-cap"><b>Golden fur, flower crown</b><span>Rainbow butterfly, sunglasses</span></figcaption>
+        </figure>
+        <figure class="grid-card" role="listitem">
+          <img src="assets/muse-03.webp" alt="Lavender Muse with a blue butterfly, goggles and a gold crown" loading="lazy">
+          <figcaption class="grid-cap"><b>Lavender fur, gold crown</b><span>Blue butterfly, goggles</span></figcaption>
+        </figure>
+        <figure class="grid-card" role="listitem">
+          <img src="assets/muse-05.webp" alt="Peach Muse with a blue butterfly, sunglasses and a flower crown" loading="lazy">
+          <figcaption class="grid-cap"><b>Peach fur, bunny ears</b><span>Blue butterfly, sunglasses</span></figcaption>
+        </figure>
+        <figure class="grid-card" role="listitem">
+          <img src="assets/muse-07.webp" alt="Golden Muse with a blue butterfly, cat-eye glasses and a gold crown" loading="lazy">
+          <figcaption class="grid-cap"><b>Golden fur, gold crown</b><span>Blue butterfly, cat-eye glasses</span></figcaption>
+        </figure>
+        <figure class="grid-card" role="listitem">
+          <img src="assets/muse-09.webp" alt="White Muse with a rainbow butterfly, goggles and a tiara" loading="lazy">
+          <figcaption class="grid-cap"><b>White fur, tiara</b><span>Rainbow butterfly, goggles</span></figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -963,6 +998,7 @@
 
   function startAuto() {
     if (reduceMotion || autoTimer) return;
+    if (!window.matchMedia("(max-width: 767px)").matches) return; // slideshow is mobile-only; wide screens show the grid
     autoTimer = setInterval(function () { goTo(slideIndex + 1, false); }, 5000);
   }
 
